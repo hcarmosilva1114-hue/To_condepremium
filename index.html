@@ -17,7 +17,6 @@
       --text-soft: #9ca3af;
       --border-soft: #1f2937;
       --accent: #22c55e;
-      --danger: #ef4444;
       --radius-xl: 1.5rem;
       --shadow-soft: 0 24px 60px rgba(0,0,0,0.65);
       --max-width: 1120px;
@@ -57,6 +56,17 @@
       margin-bottom: 24px;
     }
 
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 70px;
+      height: auto;
+    }
+
     .brand-block {
       display: flex;
       flex-direction: column;
@@ -64,7 +74,7 @@
     }
 
     .brand-title {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--text-soft);
@@ -78,6 +88,35 @@
     .brand-contact {
       font-size: 0.78rem;
       color: var(--text-soft);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .agent-photo {
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(148,163,184,0.6);
+      box-shadow: 0 0 0 2px rgba(15,23,42,0.9);
+    }
+
+    .agent-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      text-align: right;
+    }
+
+    .agent-mini strong {
+      color: #e5e7eb;
+      font-weight: 600;
     }
 
     .pill {
@@ -113,6 +152,10 @@
       header {
         flex-direction: column;
         align-items: flex-start;
+      }
+      .header-right {
+        align-self: stretch;
+        justify-content: space-between;
       }
     }
 
@@ -299,8 +342,27 @@
       font-size: 0.85rem;
     }
 
+    .contact-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-photo {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(148,163,184,0.7);
+    }
+
     .contact-name {
       font-weight: 600;
+    }
+
+    .contact-role {
+      font-size: 0.78rem;
+      color: var(--text-soft);
     }
 
     .contact-line {
@@ -445,18 +507,32 @@
 <div class="page">
   <div class="shell">
     <header>
-      <div class="brand-block">
-        <div class="brand-title">HUGO SILVA · IMOBILIÁRIO</div>
-        <div class="brand-tagline">Choose Your Dream | Live in it — RE/MAX Elegance</div>
-        <div class="brand-contact">Tel.: +351 932 838 484 · Email: hugo.silva@remax.pt</div>
+      <div class="brand-left">
+        <!-- LOGO REMAX -->
+        <img src="img/remax-elegance-logo.png" alt="RE/MAX Elegance" class="brand-logo" />
+        <div class="brand-block">
+          <div class="brand-title">HUGO SILVA · IMOBILIÁRIO</div>
+          <div class="brand-tagline">Choose Your Dream | Live in it — RE/MAX Elegance</div>
+          <div class="brand-contact">Tel.: +351 932 838 484 · Email: hugo.silva@remax.pt</div>
+        </div>
       </div>
-      <div class="pill">
-        <span class="pill-dot"></span>
-        Apresentação digital do imóvel
+      <div class="header-right">
+        <div class="agent-mini">
+          <strong>Hugo Silva</strong>
+          <span>Consultor Imobiliário</span>
+          <span>RE/MAX Elegance · AMI 23852</span>
+        </div>
+        <!-- FOTO HUGO -->
+        <img src="img/hugo-silva.jpg" alt="Hugo Silva, Consultor Imobiliário" class="agent-photo" />
       </div>
     </header>
 
-    <div class="grid">
+    <div class="pill">
+      <span class="pill-dot"></span>
+      Apresentação digital do imóvel
+    </div>
+
+    <div class="grid" style="margin-top:16px;">
       <!-- HERO PRINCIPAL -->
       <article class="hero-card">
         <div class="hero-label">
@@ -509,7 +585,7 @@
         <div class="side-header">
           <div>
             <div class="side-title">Detalhes principais</div>
-            <div class="side-sub">Resumo técnico do imóvel</div>
+            <div class="section-sub">Resumo técnico do imóvel</div>
           </div>
           <div class="badge">Vila do Conde · Porto</div>
         </div>
@@ -554,9 +630,12 @@
         </p>
 
         <div class="contact-card">
-          <div class="contact-name">Hugo Silva</div>
-          <div class="contact-line">
-            <span>Consultor Imobiliário · RE/MAX Elegance</span>
+          <div class="contact-top">
+            <img src="img/hugo-silva.jpg" alt="Hugo Silva" class="contact-photo" />
+            <div>
+              <div class="contact-name">Hugo Silva</div>
+              <div class="contact-role">Consultor Imobiliário · RE/MAX Elegance · AMI 23852</div>
+            </div>
           </div>
           <div class="contact-line">
             <span>Tel.: +351 932 838 484</span>
@@ -569,8 +648,8 @@
             <a class="btn-primary" href="https://wa.me/351932838484" target="_blank" rel="noopener">
               Agendar visita por WhatsApp
             </a>
-            <a class="btn-ghost" href="https://supercasa.pt/venda-apartamento-t0-vila-do-conde/i2039275" target="_blank" rel="noopener">
-              Ver anúncio no Supercasa
+            <a class="btn-ghost" href="tel:+351932838484">
+              Ligar agora
             </a>
           </div>
         </div>
@@ -650,7 +729,7 @@
     <footer>
       <div class="footer-left">
         <span>Hugo Silva · Consultor Imobiliário · Tel.: +351 932 838 484</span>
-        <span>RE/MAX Elegance</span>
+        <span>RE/MAX Elegance · AMI 23852</span>
       </div>
       <div class="footer-right">
         <span>Apresentação digital do imóvel — uso exclusivo de clientes e interessados.</span>
