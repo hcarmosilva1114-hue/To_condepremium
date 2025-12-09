@@ -3,743 +3,783 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apartamento T0 em Vila do Conde — Último piso com garagem | Apresentação Online</title>
-  <meta name="description" content="Apartamento T0 em construção no último piso, em Vila do Conde, com 56,75 m² de área bruta, 38,20 m² de área útil, lugar de garagem, elevador, cozinha totalmente equipada e classe energética A+. Localização privilegiada perto do metro, serviços e do centro da cidade." />
-  <meta name="author" content="Hugo Silva — Consultor Imobiliário" />
+  <title>Apartamento T0 em Vila do Conde — Em construção | Apresentação Online</title>
+  <meta name="description" content="Apartamento T0 em construção em Vila do Conde, último piso, com 56,75 m² de área bruta, 38,20 m² de área útil, classe energética A+, cozinha totalmente equipada, estores elétricos, lugar de garagem e excelente localização junto ao metro e serviços." />
+  <meta name="robots" content="index,follow" />
+
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --bg-card: #020617;
-      --primary: #f97316;
-      --primary-soft: rgba(249,115,22,0.14);
-      --text-main: #e5e7eb;
-      --text-soft: #9ca3af;
-      --border-soft: #1f2937;
-      --accent: #22c55e;
-      --radius-xl: 1.5rem;
-      --shadow-soft: 0 24px 60px rgba(0,0,0,0.65);
+      --bg: #0b0c10;
+      --bg-alt: #14151d;
+      --card: #1b1d27;
+      --accent: #e63946;
+      --accent-soft: rgba(230, 57, 70, 0.12);
+      --text: #f5f5f7;
+      --muted: #a0a3b1;
+      --border: #262837;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --radius-pill: 999px;
       --max-width: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-      color: var(--text-main);
+      background: radial-gradient(circle at top left, #18212f 0, #05060a 56%);
+      color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+
+    a { color: inherit; text-decoration: none; }
 
     .page {
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 32px 16px 40px;
+      padding: 32px 16px 48px;
     }
 
-    .shell {
-      width: 100%;
-      max-width: var(--max-width);
-    }
+    .shell { width: 100%; max-width: var(--max-width); }
 
+    /* HEADER */
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      background: linear-gradient(120deg, rgba(230, 57, 70, 0.16), rgba(10, 10, 18, 0.4));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (max-width: 780px) {
+      header { flex-direction: column; align-items: flex-start; }
     }
 
     .brand-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
-    .brand-logo {
-      width: 70px;
-      height: auto;
+    .brand-photo-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.65);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
+      background: #11121b;
+      flex-shrink: 0;
     }
 
-    .brand-block {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .brand-title {
-      font-size: 1.05rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .brand-tagline {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .brand-contact {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .agent-photo {
-      width: 54px;
-      height: 54px;
-      border-radius: 999px;
+    .brand-photo-wrap img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border: 2px solid rgba(148,163,184,0.6);
-      box-shadow: 0 0 0 2px rgba(15,23,42,0.9);
+      display: block;
     }
 
-    .agent-mini {
+    .brand-meta h1 {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .brand-meta p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .brand-right {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      text-align: right;
+      align-items: flex-end;
+      gap: 6px;
     }
 
-    .agent-mini strong {
-      color: #e5e7eb;
+    @media (max-width: 780px) {
+      .brand-right { align-items: flex-start; }
+    }
+
+    .logo-wrap {
+      max-width: 140px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .tagline {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .tagline span {
+      color: var(--accent);
       font-weight: 600;
     }
 
-    .pill {
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 840px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .hero-text {
+      padding: 22px 22px 20px;
+      background: linear-gradient(145deg, #11121b, #05060b);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pill-location {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.85);
-      border: 1px solid var(--border-soft);
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(34,197,94,0.9);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-right {
-        align-self: stretch;
-        justify-content: space-between;
-      }
-    }
-
-    .hero-card {
-      border-radius: var(--radius-xl);
-      background: radial-gradient(circle at top left, rgba(249,115,22,0.35), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(15,23,42,0.9), #020617);
-      border: 1px solid rgba(148,163,184,0.12);
-      box-shadow: var(--shadow-soft);
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.92);
-      border: 1px solid rgba(148,163,184,0.18);
-      font-size: 0.8rem;
-      color: var(--text-soft);
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      font-size: 13px;
       margin-bottom: 10px;
     }
 
-    .hero-label span {
-      font-weight: 500;
-      color: #fbbf24;
+    .pill-location-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px var(--accent-soft);
     }
 
-    .hero-main-title {
-      font-size: 1.8rem;
+    .hero-title {
+      font-size: 26px;
+      line-height: 1.25;
       font-weight: 650;
-      letter-spacing: 0.02em;
       margin-bottom: 6px;
     }
 
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--text-soft);
-      margin-bottom: 16px;
-    }
-
-    .hero-price-line {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: baseline;
-      margin-bottom: 12px;
-    }
-
-    .hero-price {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #f97316;
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-    }
-
-    .meta-pill {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.2);
-    }
-
-    .hero-description {
-      margin-top: 18px;
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      max-width: 60ch;
-    }
-
-    .hero-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-top: 20px;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .hero-flags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .flag {
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.18);
-      background: rgba(15,23,42,0.92);
-      font-size: 0.78rem;
-    }
-
-    .side-card {
-      border-radius: var(--radius-xl);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.9), #020617);
-      border: 1px solid rgba(148,163,184,0.22);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 16px;
-      display: flex;
-      flex-direction: column;
       gap: 14px;
+      margin-bottom: 18px;
+      font-size: 14px;
     }
 
-    .side-header {
+    .hero-meta-item {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+    }
+
+    .hero-meta-item strong { color: var(--text); }
+
+    .hero-price-block {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 4px;
-    }
-
-    .side-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .side-sub {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.35);
-      background: rgba(15,23,42,0.95);
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      align-items: baseline;
       gap: 8px;
-      font-size: 0.85rem;
+      margin-bottom: 18px;
     }
 
-    .stat {
-      padding: 10px;
-      border-radius: 16px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(15,23,42,1);
+    .hero-price-block .price {
+      font-size: 24px;
+      font-weight: 650;
+      letter-spacing: 0.02em;
     }
 
-    .stat-label {
-      color: var(--text-soft);
-      font-size: 0.75rem;
-      margin-bottom: 2px;
+    .hero-price-block .sqm {
+      font-size: 13px;
+      color: var(--muted);
     }
 
-    .stat-value {
-      font-weight: 600;
-      font-size: 0.94rem;
-    }
-
-    .highlight {
-      font-size: 0.83rem;
-      color: var(--text-soft);
-      margin-top: 8px;
-    }
-
-    .contact-card {
-      margin-top: 4px;
-      padding: 10px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(15,23,42,0.95));
-      border: 1px solid rgba(249,115,22,0.55);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 0.85rem;
-    }
-
-    .contact-top {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .contact-photo {
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid rgba(148,163,184,0.7);
-    }
-
-    .contact-name {
-      font-weight: 600;
-    }
-
-    .contact-role {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .contact-line {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 12px;
-    }
-
-    .contact-tagline {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .cta-row {
+    .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 4px;
+      margin-bottom: 6px;
     }
 
-    .btn-primary, .btn-ghost {
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.8rem;
-      border: 1px solid transparent;
-      text-decoration: none;
-      cursor: pointer;
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
       white-space: nowrap;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      border-color: #fb923c;
-      color: #0b1120;
-      font-weight: 600;
+      background: var(--accent);
+      border-color: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(230, 57, 70, 0.45);
     }
 
-    .btn-ghost {
-      background: transparent;
-      border-color: rgba(148,163,184,0.5);
-      color: var(--text-soft);
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(230, 57, 70, 0.6);
+      background: #f04554;
     }
 
-    main {
-      margin-top: 26px;
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
-      gap: 22px;
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--border);
+      color: var(--muted);
     }
 
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: minmax(0,1fr);
-      }
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.07);
     }
 
-    section {
-      border-radius: 22px;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(15,23,42,1);
-      padding: 18px 18px 16px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    .section-header {
+    .hero-media {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, #202335, #05060a 70%);
+      box-shadow: var(--shadow-soft);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .hero-img-wrap { flex: 1; overflow: hidden; }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.02);
+    }
+
+    .hero-strip {
+      padding: 10px 14px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 12px;
-      margin-bottom: 10px;
+      background: linear-gradient(90deg, rgba(5, 5, 10, 0.95), rgba(26, 27, 40, 0.98));
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
     }
 
+    .hero-strip span strong { color: var(--text); }
+
+    section { margin-bottom: 28px; }
+
     .section-title {
-      font-size: 1rem;
+      font-size: 18px;
       font-weight: 600;
+      margin-bottom: 14px;
     }
 
     .section-sub {
-      font-size: 0.8rem;
-      color: var(--text-soft);
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
+
+    /* Destaques */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 600px) {
+      .highlights-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .highlight-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+      font-size: 13px;
+    }
+
+    .highlight-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .highlight-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* Card layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.44);
+      font-size: 14px;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card p { font-size: 14px; color: var(--muted); }
 
     .list {
-      list-style: none;
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .list li + li { margin-top: 4px; }
+
+    /* GALERIA COM 6 FOTOS */
+    .gallery-grid {
       display: grid;
-      gap: 6px;
-      font-size: 0.86rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
     }
 
-    .list li::before {
-      content: "•";
-      margin-right: 8px;
-      color: var(--primary);
+    @media (max-width: 960px) {
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
-    .tag-grid {
+    @media (max-width: 720px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #11121b;
+      min-height: 90px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.02);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      bottom: 6px;
+      left: 8px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.68);
+      color: var(--muted);
+    }
+
+    .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
+      gap: 8px;
+      margin-top: 10px;
     }
 
-    .tag {
-      padding: 4px 10px;
+    .pill {
+      font-size: 12px;
+      padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.3);
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      background: rgba(15,23,42,0.95);
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.35);
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(230, 57, 70, 0.12);
+      border: 1px solid rgba(230, 57, 70, 0.4);
+      font-size: 13px;
+      color: #ffdfe3;
     }
 
     footer {
-      margin-top: 22px;
-      font-size: 0.75rem;
-      color: var(--text-soft);
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
       display: flex;
       flex-wrap: wrap;
+      gap: 8px;
       justify-content: space-between;
-      gap: 10px;
-      border-top: 1px solid rgba(15,23,42,1);
-      padding-top: 10px;
     }
 
-    .footer-left, .footer-right {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      align-items: center;
-    }
-
-    .hashes {
-      margin-top: 4px;
-      font-size: 0.76rem;
-      color: var(--text-soft);
-      word-break: break-word;
-    }
+    footer strong { color: var(--text); }
   </style>
 </head>
 <body>
-<div class="page">
-  <div class="shell">
-    <header>
-      <div class="brand-left">
-        <!-- LOGO REMAX -->
-        <img src="img/remax-elegance-logo.png" alt="RE/MAX Elegance" class="brand-logo" />
-        <div class="brand-block">
-          <div class="brand-title">HUGO SILVA · IMOBILIÁRIO</div>
-          <div class="brand-tagline">Choose Your Dream | Live in it — RE/MAX Elegance</div>
-          <div class="brand-contact">Tel.: +351 932 838 484 · Email: hugo.silva@remax.pt</div>
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="agent-mini">
-          <strong>Hugo Silva</strong>
-          <span>Consultor Imobiliário</span>
-          <span>RE/MAX Elegance · AMI 23852</span>
-        </div>
-        <!-- FOTO HUGO -->
-        <img src="img/hugo-silva.jpg" alt="Hugo Silva, Consultor Imobiliário" class="agent-photo" />
-      </div>
-    </header>
+  <div class="page">
+    <div class="shell">
 
-    <div class="pill">
-      <span class="pill-dot"></span>
-      Apresentação digital do imóvel
-    </div>
-
-    <div class="grid" style="margin-top:16px;">
-      <!-- HERO PRINCIPAL -->
-      <article class="hero-card">
-        <div class="hero-label">
-          Apartamento T0 · Vila do Conde
-          <span>Em construção · Último piso</span>
-        </div>
-
-        <h1 class="hero-main-title">
-          Apartamento T0 em Vila do Conde — Último piso com garagem
-        </h1>
-        <p class="hero-subtitle">
-          Moderno, eficiente e luminoso, num edifício recente com elevador, perto do metro, serviços e do centro de Vila do Conde.
-        </p>
-
-        <div class="hero-price-line">
-          <div class="hero-price">185.000 €</div>
-          <div class="hero-meta">
-            <span class="meta-pill">Área bruta: 56,75 m²</span>
-            <span class="meta-pill">Área útil: 38,20 m²</span>
-            <span class="meta-pill">Garagem: 1 lugar</span>
-            <span class="meta-pill">Classe energética: A+</span>
+      <!-- HEADER -->
+      <header>
+        <div class="brand-left">
+          <div class="brand-photo-wrap">
+            <img src="hugo-silva.jpg" alt="Hugo Silva - Consultor Imobiliário">
+          </div>
+          <div class="brand-meta">
+            <h1>Hugo Silva</h1>
+            <p>Consultor Imobiliário — Grande Porto, Vila do Conde e Póvoa</p>
           </div>
         </div>
-
-        <div class="hero-meta" style="margin-top:10px;">
-          <span class="meta-pill">Tipologia: T0</span>
-          <span class="meta-pill">Piso 2 · Último piso</span>
-          <span class="meta-pill">Elevador</span>
-          <span class="meta-pill">Cozinha totalmente equipada</span>
-        </div>
-
-        <p class="hero-description">
-          Apartamento T0 em construção, situado ao nível do último piso, com uma distribuição eficiente de espaços, excelente luminosidade e isolamento térmico e acústico de qualidade. 
-          Cozinha totalmente equipada com eletrodomésticos AEG, estores elétricos, lugar de garagem e uma localização estratégica, a poucos minutos da estação de metro, de serviços, comércio local e do centro de Vila do Conde.
-        </p>
-
-        <div class="hero-footer">
-          <div class="hero-flags">
-            <span class="flag">Ideal para primeira habitação ou investimento</span>
-            <span class="flag">Próximo de transportes, escolas e serviços</span>
+        <div class="brand-right">
+          <div class="logo-wrap">
+            <img src="remax-elegance-logo.jpg" alt="RE/MAX Elegance">
           </div>
-          <div style="font-size:0.78rem;">
-            Ref. interna (Supercasa): TC1648-1
+          <div class="tagline">
+            Choose Your Dream <span>|</span> Live in it
           </div>
         </div>
-      </article>
+      </header>
 
-      <!-- LADO DIREITO: DADOS + CONTACTO -->
-      <aside class="side-card">
-        <div class="side-header">
-          <div>
-            <div class="side-title">Detalhes principais</div>
-            <div class="section-sub">Resumo técnico do imóvel</div>
-          </div>
-          <div class="badge">Vila do Conde · Porto</div>
-        </div>
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-text">
+            <div class="pill-location">
+              <div class="pill-location-dot"></div>
+              T0 — Vila do Conde, Porto
+            </div>
+            <h2 class="hero-title">
+              Apartamento T0 em construção, último piso, com garagem e elevado padrão de conforto
+            </h2>
+            <p class="hero-sub">
+              Acolhedor apartamento T0 em construção, situado ao nível do último piso, com excelente isolamento térmico e acústico, cozinha totalmente equipada com eletrodomésticos AEG, estores elétricos, lugar de garagem e localização estratégica junto ao metro, supermercados, padarias, cafés, serviços e próximo do centro de Vila do Conde.
+            </p>
 
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-label">Tipologia</div>
-            <div class="stat-value">T0</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Preço</div>
-            <div class="stat-value">185.000 €</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Área bruta</div>
-            <div class="stat-value">56,75 m²</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Área útil</div>
-            <div class="stat-value">38,20 m²</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Garagem</div>
-            <div class="stat-value">1 lugar</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Piso</div>
-            <div class="stat-value">2 · Último piso</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Classe energética</div>
-            <div class="stat-value">A+</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Estado</div>
-            <div class="stat-value">Em construção</div>
-          </div>
-        </div>
+            <div class="hero-meta">
+              <div class="hero-meta-item"><strong>T0</strong> em construção</div>
+              <div class="hero-meta-item"><strong>56,75 m²</strong> área bruta</div>
+              <div class="hero-meta-item"><strong>38,20 m²</strong> área útil</div>
+              <div class="hero-meta-item"><strong>Piso 2</strong> (último piso)</div>
+              <div class="hero-meta-item"><strong>Garagem</strong> 1 lugar</div>
+              <div class="hero-meta-item"><strong>Elevador</strong></div>
+              <div class="hero-meta-item"><strong>Classe energética</strong> A+</div>
+              <div class="hero-meta-item"><strong>Cozinha</strong> equipada AEG</div>
+              <div class="hero-meta-item"><strong>Estores</strong> elétricos</div>
+              <div class="hero-meta-item"><strong>Conservação</strong> Excelente</div>
+            </div>
 
-        <p class="highlight">
-          Edifício recente com elevador, estores elétricos, excelente isolamento térmico e acústico, num contexto urbano consolidado, com metro, comércio, serviços e o centro de Vila do Conde a curta distância.
-        </p>
+            <div class="hero-price-block">
+              <div class="price">185.000 €</div>
+              <div class="sqm">≈ 3.245 €/m²</div>
+            </div>
 
-        <div class="contact-card">
-          <div class="contact-top">
-            <img src="img/hugo-silva.jpg" alt="Hugo Silva" class="contact-photo" />
-            <div>
-              <div class="contact-name">Hugo Silva</div>
-              <div class="contact-role">Consultor Imobiliário · RE/MAX Elegance · AMI 23852</div>
+            <div class="hero-cta-row">
+              <a class="btn btn-primary" href="https://wa.me/351926691685" target="_blank" rel="noopener noreferrer">
+                Contactar via WhatsApp
+              </a>
+              <a class="btn btn-secondary" href="mailto:seu-email@seu-dominio.pt?subject=Interesse%20no%20Apartamento%20T0%20em%20Vila%20do%20Conde">
+                Enviar email
+              </a>
+            </div>
+            <p class="hero-note">
+              Informação para efeitos de apresentação ao cliente comprador. Detalhes, disponibilidade e condições sujeitos a confirmação.
+            </p>
+          </div>
+
+          <aside class="hero-media">
+            <div class="hero-badge">T0 em construção · Último piso</div>
+            <div class="hero-img-wrap">
+              <img
+                class="hero-img"
+                src="images/foto1.jpg"
+                alt="Zona social do apartamento T0 em construção em Vila do Conde"
+              />
+            </div>
+            <div class="hero-strip">
+              <span><strong>Localização:</strong> Vila do Conde, Porto (zona com metro e serviços nas proximidades)</span>
+              <span>Ambiente tranquilo, com acesso rápido ao centro da cidade</span>
+            </div>
+          </aside>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section>
+          <h2 class="section-title">Destaques principais</h2>
+          <p class="section-sub">
+            Pontos-chave do apartamento para uma decisão rápida e informada.
+          </p>
+
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-label">Tipologia</div>
+              <div class="highlight-value">T0</div>
+              <p>Apartamento funcional, ideal para habitação própria ou investimento.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Área</div>
+              <div class="highlight-value">56,75 m² brutos</div>
+              <p>38,20 m² de área útil, com aproveitamento eficiente do espaço.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Piso</div>
+              <div class="highlight-value">Último piso</div>
+              <p>Mais privacidade, melhor exposição solar e vista desafogada.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Preço</div>
+              <div class="highlight-value">185.000 €</div>
+              <p>Valor competitivo face à localização, qualidade de construção e equipamentos.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Eficiência</div>
+              <div class="highlight-value">Classe A+</div>
+              <p>Elevada eficiência energética, contribuindo para conforto e menores consumos.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Equipamentos</div>
+              <div class="highlight-value">Cozinha AEG</div>
+              <p>Cozinha totalmente equipada com placa, forno/micro-ondas, exaustor, combinado, máquina de lavar loiça e roupa.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Conforto</div>
+              <div class="highlight-value">Isolamento</div>
+              <p>Isolamento acústico e térmico de alta qualidade, estores elétricos e construção moderna.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Estacionamento</div>
+              <div class="highlight-value">Garagem</div>
+              <p>Lugar de garagem incluído, acrescentando comodidade ao dia a dia.</p>
             </div>
           </div>
-          <div class="contact-line">
-            <span>Tel.: +351 932 838 484</span>
-            <span>Email: hugo.silva@remax.pt</span>
+        </section>
+
+        <!-- DESCRIÇÃO + CARACTERÍSTICAS -->
+        <section>
+          <div class="two-col">
+            <article class="card">
+              <h3>Descrição do imóvel</h3>
+              <p>
+                Este apartamento T0 em construção, situado em Vila do Conde, foi pensado para oferecer uma combinação equilibrada entre conforto, funcionalidade e eficiência. Localizado ao nível do último piso, beneficia de excelente exposição solar, ambiente mais resguardado e vista desafogada.
+              </p>
+              <p style="margin-top: 10px;">
+                A cozinha é um dos pontos fortes do imóvel: totalmente equipada com eletrodomésticos da marca AEG, integra placa, forno com função micro-ondas, exaustor, combinado, máquina de lavar loiça e máquina de lavar roupa, garantindo qualidade, durabilidade e praticidade no dia a dia.
+              </p>
+              <p style="margin-top: 10px;">
+                O isolamento térmico e acústico, a classe energética A+ e os estores elétricos contribuem para um ambiente interior confortável e eficiente. O apartamento dispõe ainda de lugar de garagem, assegurando uma solução completa tanto para habitação própria como para investimento.
+              </p>
+            </article>
+
+            <aside class="card">
+              <h3>Distribuição e características</h3>
+              <ul class="list">
+                <li>Tipologia: T0.</li>
+                <li>Estado: Em construção / Conservação excelente.</li>
+                <li>Área bruta: 56,75 m².</li>
+                <li>Área útil: 38,20 m².</li>
+                <li>Piso: 2 (último piso).</li>
+                <li>Classe energética: A+.</li>
+                <li>Isolamento térmico e acústico de alta qualidade.</li>
+                <li>Cozinha totalmente equipada (marca AEG).</li>
+                <li>Estores elétricos.</li>
+                <li>Elevador.</li>
+                <li>Lugar de garagem (1 lugar).</li>
+              </ul>
+            </aside>
           </div>
-          <div class="contact-tagline">
-            Acompanho todo o processo: da análise ao imóvel até à assinatura da escritura, com transparência e rigor.
-          </div>
-          <div class="cta-row">
-            <a class="btn-primary" href="https://wa.me/351932838484" target="_blank" rel="noopener">
-              Agendar visita por WhatsApp
-            </a>
-            <a class="btn-ghost" href="tel:+351932838484">
-              Ligar agora
-            </a>
-          </div>
-        </div>
-      </aside>
-    </div>
+        </section>
 
-    <main>
-      <!-- DESCRIÇÃO E EQUIPAMENTOS -->
-      <section>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Descrição do imóvel</div>
-            <div class="section-sub">Conforto, eficiência e localização privilegiada</div>
-          </div>
-        </div>
+        <!-- LOCALIZAÇÃO -->
+        <section>
+          <h2 class="section-title">Localização e envolvente</h2>
+          <div class="two-col">
+            <div class="card">
+              <h3>Vila do Conde — Proximidade a metro e serviços</h3>
+              <p>
+                O apartamento localiza-se em Vila do Conde, numa zona com acesso fácil a transportes, em particular à estação de metro, e com supermercados, padarias, cafés e outros serviços a curta distância. A proximidade ao centro da cidade reforça a conveniência para o dia a dia.
+              </p>
+              <p style="margin-top: 10px;">
+                Trata-se de uma localização estratégica tanto para quem pretende viver com conforto e boa mobilidade, como para quem procura um ativo imobiliário com potencial de valorização e facilidade de arrendamento.
+              </p>
 
-        <p style="font-size:0.9rem; color:#d1d5db; margin-bottom:10px;">
-          Este T0 em construção foi pensado para quem procura um espaço prático, moderno e com baixos custos de utilização, sem abdicar da localização nem da qualidade dos materiais.
-        </p>
+              <div class="pill-row">
+                <div class="pill">Próximo do metro</div>
+                <div class="pill">Serviços e comércio por perto</div>
+                <div class="pill">Acesso fácil ao centro</div>
+                <div class="pill">Zona residencial consolidada</div>
+              </div>
+            </div>
 
-        <ul class="list" style="margin-bottom:12px;">
-          <li>Apartamento ao nível do último piso, com excelente exposição solar e vista desafogada.</li>
-          <li>Isolamento térmico e acústico de elevada qualidade, garantindo conforto e privacidade.</li>
-          <li>Cozinha totalmente equipada com eletrodomésticos AEG (placa, forno com função micro-ondas, exaustor, combinado, máquina de lavar loiça e máquina de lavar roupa).</li>
-          <li>Estores elétricos, que permitem gerir melhor a luz natural e o conforto térmico.</li>
-          <li>Lugar de garagem incluído, em edifício com elevador.</li>
-        </ul>
-
-        <p style="font-size:0.9rem; color:#d1d5db;">
-          A localização é um dos grandes pontos fortes deste imóvel: está a poucos minutos da estação de metro, próximo de supermercados, padarias, cafés, serviços e de todo o comércio local, bem como do centro de Vila do Conde. Uma solução equilibrada para viver ou investir, numa zona com procura sustentável.
-        </p>
-      </section>
-
-      <!-- LOCALIZAÇÃO, ENVOLVENTE E NOTAS -->
-      <section>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Localização & envolvente</div>
-            <div class="section-sub">Vila do Conde, próximo de metro e serviços</div>
-          </div>
-        </div>
-
-        <ul class="list" style="margin-bottom:10px;">
-          <li>Zona residencial com acesso rápido ao centro de Vila do Conde.</li>
-          <li>Proximidade da estação de metro, facilitando deslocações para o Porto e restantes áreas da rede.</li>
-          <li>Acesso conveniente a supermercados, padarias, cafés, farmácia e outros serviços essenciais.</li>
-          <li>Boas acessibilidades rodoviárias, com ligação a vias principais e autoestrada.</li>
-          <li>Ambiente tranquilo, mas com toda a funcionalidade do dia a dia por perto.</li>
-        </ul>
-
-        <div class="section-header" style="margin-top:10px; margin-bottom:6px;">
-          <div>
-            <div class="section-title" style="font-size:0.9rem;">Notas adicionais</div>
-            <div class="section-sub">
-              Informação não dispensa a consulta da documentação oficial.
+            <div class="card">
+              <h3>Referência de localização</h3>
+              <p>
+                Por motivos de privacidade e segurança, a morada exata não é indicada nesta apresentação. A localização detalhada é facultada em contexto de visita agendada ou negociação avançada.
+              </p>
+              <ul class="list">
+                <li>Concelho: Vila do Conde.</li>
+                <li>Distrito: Porto.</li>
+                <li>Zona com metro e serviços nas proximidades.</li>
+              </ul>
             </div>
           </div>
+        </section>
+
+        <!-- GALERIA (6 FOTOS) -->
+        <section>
+          <h2 class="section-title">Imagens do imóvel</h2>
+          <p class="section-sub">
+            As imagens seguintes representam o estado atual do empreendimento e/ou do apartamento. Podem ser fornecidos mais registos fotográficos ou vídeo mediante pedido.
+          </p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/foto1.jpg" alt="Zona social do apartamento T0">
+              <span>Zona social</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto2.jpg" alt="Cozinha equipada">
+              <span>Cozinha equipada</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto3.jpg" alt="Detalhe da área de estar">
+              <span>Área de estar</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto4.jpg" alt="Zona de circulação ou hall">
+              <span>Hall / Circulação</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto5.jpg" alt="Casa de banho do T0">
+              <span>Casa de banho</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto6.jpg" alt="Garagem ou vista exterior">
+              <span>Garagem / Exterior</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section>
+          <div class="card">
+            <h3>Quer falar sobre este T0 ou receber outras opções?</h3>
+            <p>
+              Se pretende mais informação, plantas, memória descritiva ou alternativas na mesma zona, estou disponível para o apoiar em todo o processo de análise e compra.
+            </p>
+            <div class="hero-cta-row" style="margin-top: 16px;">
+              <a class="btn btn-primary" href="https://wa.me/351926691685" target="_blank" rel="noopener noreferrer">
+                Falar agora no WhatsApp
+              </a>
+              <a class="btn btn-secondary" href="mailto:seu-email@seu-dominio.pt?subject=Pedido%20de%20informa%C3%A7%C3%B5es%20-%20Apartamento%20T0%20Vila%20do%20Conde">
+                Pedir mais informações por email
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <strong>Hugo Silva</strong> · Consultor Imobiliário · WhatsApp: 926 691 685
         </div>
-
-        <p style="font-size:0.85rem; color:#9ca3af;">
-          Toda a informação apresentada carece de confirmação junto da documentação técnica e comercial disponível. 
-          As áreas indicadas são aproximadas. A viabilidade de financiamento deve ser sempre validada com as entidades bancárias. 
-          Acompanhamos todo o processo com apoio jurídico e de crédito habitação especializado.
-        </p>
-
-        <div class="tag-grid">
-          <span class="tag">T0 Vila do Conde</span>
-          <span class="tag">Investimento</span>
-          <span class="tag">Próximo do metro</span>
-          <span class="tag">Garagem</span>
-          <span class="tag">Classe energética A+</span>
-          <span class="tag">Cozinha equipada</span>
+        <div>
+          Choose Your Dream | Live in it
         </div>
-      </section>
-    </main>
+      </footer>
 
-    <footer>
-      <div class="footer-left">
-        <span>Hugo Silva · Consultor Imobiliário · Tel.: +351 932 838 484</span>
-        <span>RE/MAX Elegance · AMI 23852</span>
-      </div>
-      <div class="footer-right">
-        <span>Apresentação digital do imóvel — uso exclusivo de clientes e interessados.</span>
-      </div>
-    </footer>
-
-    <div class="hashes">
-      #VilaDoConde #Imobiliario #ApartamentoT0 #InvestimentoImobiliario #RemaxElegance #HugoSilvaImobiliario #Metro #Garagem #ClasseEnergeticaAplus #ChooseYourDreamLiveInIt
     </div>
   </div>
-</div>
 </body>
 </html>
